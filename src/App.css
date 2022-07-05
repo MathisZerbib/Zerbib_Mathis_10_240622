@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -24,10 +29,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +37,8 @@
     transform: rotate(360deg);
   }
 }
+.nav-link { color: #FF6060;  margin: 0px 15px;
+  font-size: 18px;
+  text-align: center;}
+  
+.nav-link:not([aria-current]) { text-decoration: none;}
