@@ -6,7 +6,7 @@ import LogoBanner from "../../assets/banner.png";
 
 const BannerDiv = styled.div`
   height: 220px;
-  border-radius: 10px;
+  border-radius: 25px;
   position: relative;
   background: black;
   overflow: hidden;
@@ -15,17 +15,19 @@ const BannerDiv = styled.div`
 `;
 
 const BannerImage = styled.img`
-opacity: 0.4;
+opacity: 0.7;
+width: 100%;
+height: inherit;
+
   `
 
 const BannerCaption = styled.h2`
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+font-size: 2rem;
+color: white;
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
 `;
 
 function Banner() {
