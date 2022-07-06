@@ -6,7 +6,7 @@ const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background: #F6F6F6;
     border-radius: 30px;
     width: 90%;
@@ -14,13 +14,14 @@ const CardContainer = styled.div`
     margin: 40px auto;
 `;
 const CardBody = styled.div`
-    margin:30px 0;
+    margin:30px;
     border-radius: 10px;
     position: relative;
     height: 340px;
     width: 340px;
-    background-image: url(${Thumbnail});
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url(${Thumbnail});
     background-repeat: no-repeat;
+
 `;
 
 // const ThumbnailImage = styled.img`
@@ -36,7 +37,7 @@ const TitleCard = styled.p`
   position: absolute;
   bottom: 0;
   left: 25px;
-  width: 80px;
+  right: 25px;
   line-height: 25px;
 `;
 
