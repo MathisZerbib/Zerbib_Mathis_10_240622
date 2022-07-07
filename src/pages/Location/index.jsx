@@ -45,11 +45,7 @@ function Location() {
     getLocationById(id).then((res) => setData(res));
   }, [id]);
   console.log("Data From Location", data);
-  if (data && data.length > 0) {
-    const intRating = parseInt(data[0].rating);
-    console.log("intRating", intRating);
-  }
-
+  
   // do with `userId` what you need to load that user's data
   return (
     <>
