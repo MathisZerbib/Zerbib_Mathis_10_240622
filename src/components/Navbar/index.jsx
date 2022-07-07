@@ -4,7 +4,8 @@ import Logo from "../../assets/Logo.png";
 import React from "react";
 
 const HomeLogo = styled.img`
-  height: 70px;
+max-height: 70px;
+max-width: 200px;
 `;
 
 const NavContainer = styled.nav`
