@@ -3,17 +3,19 @@ import styled from "styled-components";
 import Logo from "../../assets/Logo.png";
 import React from "react";
 
+
+const NavContainer = styled.nav`
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
 const HomeLogo = styled.img`
 max-height: 70px;
 max-width: 200px;
 `;
 
-const NavContainer = styled.nav`
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
 
 function Header() {
   return (

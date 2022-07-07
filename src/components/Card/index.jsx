@@ -3,12 +3,13 @@ import styled from "styled-components";
 import Thumbnail from "../../assets/thumbnail.png";
 import { getLocations } from "services/Api";
 import  { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: #F6F6F6;
     border-radius: 25px;
     width: 90%;
@@ -674,9 +675,11 @@ function Card() {
       <CardContainer>
         { data && data.length>0 && data.map((el, i) => {
           return (
-            <CardBody key={i}>
+            <Link  key={i} to={{ pathname: "/location/"+ el.id }}>
+            <CardBody>
               <TitleCard>{el.title}</TitleCard>
             </CardBody>
+            </Link>
           );
         })}
       </CardContainer>
