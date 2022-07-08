@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import colors from "utils/style/colors";
+import Tags from "components/Tags";
 
 const CoverContainer = styled.div`
   height: 415px;
@@ -52,7 +53,7 @@ margin-top: 0;
 const HostContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: end;
 `;
 
 const HostName = styled.p`
@@ -66,6 +67,15 @@ const HostCover = styled.img`
 height: 65px;
 border-radius: 65px;
 margin-block-end: 1em;
+`;
+
+
+const TagListContainer = styled.div`
+display: flex;
+flex: 1 1 100%;
+flex-direction: row;
+align-items: center;
+align-content: space-between;
 `;
 
 function Location() {
@@ -103,7 +113,9 @@ function Location() {
                 <LocTitleContainer>
                   <LocTitle>{el.title}</LocTitle>
                   <LocSubTitle>{el.location}</LocSubTitle>
-                  <p>{el.tags}</p>
+                  <TagListContainer>
+                  <Tags tags={el.tags}></Tags>
+                  </TagListContainer>
                 </LocTitleContainer>
 
                 <div>
