@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/logo_red.png";
 import React from "react";
-
 
 const NavContainer = styled.nav`
   padding: 30px;
@@ -12,32 +11,23 @@ const NavContainer = styled.nav`
 `;
 
 const HomeLogo = styled.img`
-max-height: 70px;
-max-width: 200px;
+  max-height: 70px;
+  max-width: 200px;
 `;
 
-
 function Header() {
+  const isLinkActive = (isActive) =>
+    "nav-link" + (!isActive ? " unselected" : "");
   return (
     <NavContainer>
       <NavLink to="/">
         <HomeLogo src={Logo} />
       </NavLink>
       <div>
-        <NavLink
-          className={(isActive) =>
-            "nav-link" + (!isActive ? " unselected" : "")
-          }
-          to="/"
-        >
+        <NavLink className={isLinkActive} to="/">
           Accueil
         </NavLink>
-        <NavLink
-          className={(isActive) =>
-            "nav-link" + (!isActive ? " unselected" : "")
-          }
-          to="/about"
-        >
+        <NavLink className={isLinkActive} to="/about">
           A propos
         </NavLink>
       </div>

@@ -37,6 +37,37 @@ const LocTitleContainer = styled.div`
   place-content: space-around;
 `;
 
+const LocTitle = styled.h2`
+font-size: 	2.25rem;
+color: #FF6060;
+margin-bottom: 0;
+`;
+
+const LocSubTitle = styled.p`
+font-size: 	1.125rem;
+color: #FF6060;
+margin-top: 0;
+`;
+
+const HostContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const HostName = styled.p`
+width: 5rem;
+font-size: 	1.125rem;
+color: #FF6060;
+margin-top: 0;
+`;
+
+const HostCover = styled.img`
+height: 65px;
+border-radius: 65px;
+margin-block-end: 1em;
+`;
+
 function Location() {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -44,32 +75,45 @@ function Location() {
   useEffect(() => {
     getLocationById(id).then((res) => setData(res));
   }, [id]);
-  console.log("Data From Location", data);
+  // console.log("Data From Location", data);
   
   // do with `userId` what you need to load that user's data
   return (
     <>
       {data &&
         data.length > 0 &&
-        data.map((el, i) => {
+        data.map((el, index) => {
+          let ratingStar = []
+          for (var i=0; i < el.rating; i++) {
+            ratingStar.push(i+1);
+          }
+          while(ratingStar.length < 5) {
+            ratingStar.push(0);
+          }
+          console.log(el.rating, ratingStar);
+
           return (
-            <div key={i}>
+            <div key={index}>
               <CoverContainer>
+                {/* TODO Build a caroussel instead */}
                 <CoverImage src={el.cover}></CoverImage>
               </CoverContainer>
 
               <SectionHeaderContainer>
                 <LocTitleContainer>
-                  <p>{el.title}</p>
-                  <p>{el.location}</p>
+                  <LocTitle>{el.title}</LocTitle>
+                  <LocSubTitle>{el.location}</LocSubTitle>
                   <p>{el.tags}</p>
                 </LocTitleContainer>
 
                 <div>
-                <p>{el.host.name}</p>
-
-                  {["1", "1", "1", "0", "0"].map((el, i) => { 
-                    if (el === "1") {
+                  <HostContainer>
+                  <HostName>{el.host.name}</HostName>
+                  <HostCover src={el.host.picture}></HostCover>
+                  </HostContainer>
+                  {
+                  ratingStar.map((el, i) => {
+                    if (el >= 1) {
                       return (
                         <FontAwesomeIcon key={i} icon={faStar} color={colors.primary} />
                       );
