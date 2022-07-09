@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const AccordionCard = styled.div`
      width: 600px;
      margin: 2rem auto;
+     justify-content: space-between;
   `;
   const AccordionTitle = styled.div`
     display: flex;
@@ -17,12 +18,13 @@ const AccordionCard = styled.div`
     cursor: pointer;
     background-color: ${colors.primary};
     color: white;
-    width: 100%;
     padding: 10px;
     border-radius: 10px;
   `;
     const AccordionContent = styled.div`
     padding: 1rem;
+    background: #F6F6F6;
+    color: ${colors.primary};
     `;
 
 const Accordion = ({ title, content }) => {
@@ -41,6 +43,8 @@ const Accordion = ({ title, content }) => {
                         
                         
                              </AccordionTitle>
+
+                             {/* TODO If Received array Then map it for equipments */}
       {isActive && <AccordionContent>{content}</AccordionContent>}
     </AccordionCard>
   );

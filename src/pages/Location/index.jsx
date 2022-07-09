@@ -157,8 +157,6 @@ function Location() {
                   <Accordion title="Equipments" content={el.equipments} />
                 
               </AccordionContainer>
-              <p>{el.description}</p>
-              <p>{el.equipments}</p>
             </div>
           );
         })}
