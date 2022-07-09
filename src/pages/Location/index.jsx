@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import colors from "utils/style/colors";
 import Tags from "components/Tags";
+import Accordion from "components/Accordion";
 
 const CoverContainer = styled.div`
   height: 415px;
@@ -39,15 +40,15 @@ const LocTitleContainer = styled.div`
 `;
 
 const LocTitle = styled.h2`
-font-size: 	2.25rem;
-color: #FF6060;
-margin-bottom: 0;
+  font-size: 2.25rem;
+  color: #ff6060;
+  margin-bottom: 0;
 `;
 
 const LocSubTitle = styled.p`
-font-size: 	1.125rem;
-color: #FF6060;
-margin-top: 0;
+  font-size: 1.125rem;
+  color: #ff6060;
+  margin-top: 0;
 `;
 
 const HostContainer = styled.div`
@@ -57,25 +58,29 @@ const HostContainer = styled.div`
 `;
 
 const HostName = styled.p`
-width: 5rem;
-font-size: 	1.125rem;
-color: #FF6060;
-margin-top: 0;
+  width: 5rem;
+  font-size: 1.125rem;
+  color: #ff6060;
+  margin: 20px;
 `;
 
 const HostCover = styled.img`
-height: 65px;
-border-radius: 65px;
-margin-block-end: 1em;
+  height: 65px;
+  border-radius: 65px;
+  margin: 20px;
 `;
 
-
 const TagListContainer = styled.div`
-display: flex;
-flex: 1 1 100%;
-flex-direction: row;
-align-items: center;
-align-content: space-between;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+`;
+
+const AccordionContainer = styled.div`
+margin: 2rem auto;
+display:flex;
 `;
 
 function Location() {
@@ -86,18 +91,18 @@ function Location() {
     getLocationById(id).then((res) => setData(res));
   }, [id]);
   // console.log("Data From Location", data);
-  
+
   // do with `userId` what you need to load that user's data
   return (
     <>
       {data &&
         data.length > 0 &&
         data.map((el, index) => {
-          let ratingStar = []
-          for (var i=0; i < el.rating; i++) {
-            ratingStar.push(i+1);
+          let ratingStar = [];
+          for (var i = 0; i < el.rating; i++) {
+            ratingStar.push(i + 1);
           }
-          while(ratingStar.length < 5) {
+          while (ratingStar.length < 5) {
             ratingStar.push(0);
           }
           console.log(el.rating, ratingStar);
@@ -114,31 +119,44 @@ function Location() {
                   <LocTitle>{el.title}</LocTitle>
                   <LocSubTitle>{el.location}</LocSubTitle>
                   <TagListContainer>
-                  <Tags tags={el.tags}></Tags>
+                    <Tags tags={el.tags}></Tags>
                   </TagListContainer>
                 </LocTitleContainer>
 
                 <div>
                   <HostContainer>
-                  <HostName>{el.host.name}</HostName>
-                  <HostCover src={el.host.picture}></HostCover>
+                    <HostName>{el.host.name}</HostName>
+                    <HostCover src={el.host.picture}></HostCover>
                   </HostContainer>
-                  {
-                  ratingStar.map((el, i) => {
+                  {ratingStar.map((el, i) => {
                     if (el >= 1) {
                       return (
-                        <FontAwesomeIcon key={i} icon={faStar} color={colors.primary} />
+                        <FontAwesomeIcon
+                          key={i}
+                          icon={faStar}
+                          color={colors.primary}
+                        />
                       );
                     } else {
                       return (
-                        <FontAwesomeIcon key={i} icon={faStar} color="#E3E3E3" />
+                        <FontAwesomeIcon
+                          key={i}
+                          icon={faStar}
+                          color="#E3E3E3"
+                        />
                       );
                     }
                   })}
                 </div>
               </SectionHeaderContainer>
 
-              <p>Description</p>
+                <AccordionContainer>
+                  
+                  <Accordion title="Description" content={el.description} />
+                  
+                  <Accordion title="Equipments" content={el.equipments} />
+                
+              </AccordionContainer>
               <p>{el.description}</p>
               <p>{el.equipments}</p>
             </div>

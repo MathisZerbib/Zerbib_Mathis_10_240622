@@ -12,6 +12,9 @@ line-height: 0;
     color: #fff;
 `;
 
+/**
+ * @param {{ tags: string[]; }} props
+ */
 function Tags(props) {
   return (
     <>
