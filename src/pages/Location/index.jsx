@@ -9,6 +9,7 @@ import Tags from "components/Tags";
 import Accordion from "components/Accordion";
 import NotFound from "pages/NotFound";
 import { Loader } from "utils/style/atom";
+import Caroussel from "components/Caroussel";
 
 const CoverContainer = styled.div`
   height: 415px;
@@ -18,15 +19,6 @@ const CoverContainer = styled.div`
   margin: 0 auto;
   max-width: 1240px;
 `;
-
-const CoverImage = styled.img`
-  opacity: 0.7;
-  width: 100%;
-  height: inherit;
-  object-fit: cover;
-  object-position: center;
-`;
-
 const SectionHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -131,7 +123,7 @@ function Location() {
             <div key={index}>
               <CoverContainer>
                 {/* TODO Build a caroussel instead */}
-                <CoverImage src={el.cover}></CoverImage>
+                <Caroussel slides={el.pictures} />
               </CoverContainer>
 
               <SectionHeaderContainer>

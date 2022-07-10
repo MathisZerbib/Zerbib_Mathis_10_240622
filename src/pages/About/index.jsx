@@ -1,16 +1,31 @@
+import Banner from 'components/Banner';
 import React from 'react';
+import styled from 'styled-components';
+import Accordion  from '../../components/Accordion';
 
-
-
+const AccordionContainer = styled.div`
+margin: 0 auto;
+display:flex;
+flex-direction: column;
+width: 62.5rem;
+`;
 function About() {
     return (
       <>
         <main>
-          <h2>Who are we?</h2>
-          <p>
-            That feels like an existential question, don't you
-            think?
-          </p>
+        <Banner></Banner>
+
+          <AccordionContainer>
+                  
+                  <Accordion title="Fiabilité" content={['Coucou']} />
+                  
+                  <Accordion title="Respect" content={['La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.']} />
+                
+                  <Accordion title="Service" content={['Coucou']} />
+
+                  <Accordion title="Responsabilité" content={['Coucou']} />
+
+              </AccordionContainer>
         </main>
       </>
     );
