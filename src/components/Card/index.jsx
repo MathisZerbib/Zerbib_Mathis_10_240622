@@ -4,6 +4,7 @@ import Thumbnail from "../../assets/thumbnail.png";
 import { getLocations } from "services/Api";
 import  { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Loader } from "utils/style/atom";
 
 const CardContainer = styled.div`
     display: flex;
@@ -40,14 +41,22 @@ const TitleCard = styled.p`
 
 function Card() {
     const [data, setData] = useState([]);
+    const [isDataLoading, setDataLoading] = useState(false)
+
 
     useEffect(() => {
-        getLocations().then(res => setData(res.data))
+      setDataLoading(true)
+        getLocations().then(res => {setData(res.data)
+          setDataLoading(false)
+        
+        })
     },[]);
   return (
     <>
       <CardContainer>
-        { data && data.length>0 && data.map((el, i) => {
+        {isDataLoading ? (
+        <Loader />
+      ) :data && data.length>0 && data.map((el, i) => {
           return (
             <Link  key={i} to={{ pathname: "/location/"+ el.id }}>
             <CardBody  style={{

@@ -7,6 +7,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import colors from "utils/style/colors";
 import Tags from "components/Tags";
 import Accordion from "components/Accordion";
+import NotFound from "pages/NotFound";
+import { Loader } from "utils/style/atom";
 
 const CoverContainer = styled.div`
   height: 415px;
@@ -86,16 +88,30 @@ display:flex;
 function Location() {
   const { id } = useParams();
   const [data, setData] = useState([]);
+  const [isDataLoading, setDataLoading] = useState(false)
 
   useEffect(() => {
-    getLocationById(id).then((res) => setData(res));
+    setDataLoading(true)
+    getLocationById(id).then((res) => {
+      setData(res)
+      setDataLoading(false)
+    });
+
+    
   }, [id]);
-  // console.log("Data From Location", data);
+
+  console.log("Data From Location", data[0], id.length);
+  if(
+    id.length !== 8) {
+    return (<NotFound></NotFound>)
+  }
 
   // do with `userId` what you need to load that user's data
   return (
-    <>
-      {data &&
+    <> 
+      {isDataLoading ? (
+        <Loader />
+      ) :data &&
         data.length > 0 &&
         data.map((el, index) => {
           let ratingStar = [];

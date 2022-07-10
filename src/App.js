@@ -6,12 +6,14 @@ import About from './pages/About';
 import NavBar from './components/Navbar';
 import Location from './pages/Location';
 import Footer from 'components/Footer';
+import NotFound from 'pages/NotFound';
 
 function App() {
   return (
     <div className="App">
          <NavBar></NavBar>
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="/location/:id" element={<Location />} />
