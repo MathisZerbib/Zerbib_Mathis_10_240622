@@ -93,18 +93,22 @@ function Location() {
   useEffect(() => {
     setDataLoading(true)
     getLocationById(id).then((res) => {
+      console.log('res', res.lenght)
+
       setData(res)
-      setDataLoading(false)
+      setDataLoading(false)      
     });
 
     
   }, [id]);
 
-  console.log("Data From Location", data[0], id.length);
-  if(
-    id.length !== 8) {
+
+  if(data.length === 0) {
     return (<NotFound></NotFound>)
   }
+
+
+  console.log("Data From Location", data[0], id.length);
 
   // do with `userId` what you need to load that user's data
   return (
