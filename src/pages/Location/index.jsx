@@ -122,7 +122,6 @@ function Location() {
           return (
             <div key={index}>
               <CoverContainer>
-                {/* TODO Build a caroussel instead */}
                 <Caroussel slides={el.pictures} />
               </CoverContainer>
 

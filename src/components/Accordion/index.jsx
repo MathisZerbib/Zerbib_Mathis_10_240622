@@ -21,9 +21,47 @@ const AccordionTitle = styled.div`
   border-radius: 10px;
 `;
 const AccordionContent = styled.div`
+  color: ${colors.primary};
   padding: 1rem;
   background: #f6f6f6;
-  color: ${colors.primary};
+  text-align: initial;
+  text-decoration: inherit;
+  border-radius: 0 0 10px 10px;
+  -webkit-animation: fadein 1s;
+  list-style: none;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s; 
+   -ms-animation: fadein 1s; 
+    -o-animation: fadein 1s; 
+       animation: fadein 1s;
+
+
+@keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
 `;
 
 const Accordion = ({ title, content }) => {
@@ -43,7 +81,13 @@ const Accordion = ({ title, content }) => {
       </AccordionTitle>
 
       {/* TODO If Received array Then map it for equipments */}
-      {isActive && <AccordionContent>{content}</AccordionContent>}
+
+      {isActive && Array.isArray(content) && content.map((el, index) => {
+        return (<AccordionContent key={index}><li>{el}
+          </li></AccordionContent>)
+      })
+    }
+      {isActive && !Array.isArray(content) && <AccordionContent>{content}</AccordionContent>}
     </AccordionCard>
   );
 };

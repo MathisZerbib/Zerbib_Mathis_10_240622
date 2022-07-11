@@ -36,8 +36,6 @@ const Caroussel = ({ slides }) => {
 
     return (
       <>
-        
-
         <StyledSlider>
         { length <= 1 ? '': 
           <FontAwesomeIcon
