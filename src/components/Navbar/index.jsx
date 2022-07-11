@@ -6,8 +6,10 @@ import React from "react";
 const NavContainer = styled.nav`
   padding: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  width: 90vw;
+  margin: 0 auto;
 `;
 
 const HomeLogo = styled.img`

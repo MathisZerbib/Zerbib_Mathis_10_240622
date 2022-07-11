@@ -7,7 +7,6 @@ const AccordionContainer = styled.div`
 margin: 0 auto;
 display:flex;
 flex-direction: column;
-width: 62.5rem;
 `;
 function About() {
     return (

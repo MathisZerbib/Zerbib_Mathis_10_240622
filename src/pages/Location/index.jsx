@@ -17,7 +17,7 @@ const CoverContainer = styled.div`
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1240px;
+  max-width: 1200px;
 `;
 const SectionHeaderContainer = styled.div`
   display: flex;

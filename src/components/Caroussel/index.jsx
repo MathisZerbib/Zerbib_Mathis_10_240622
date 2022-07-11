@@ -5,7 +5,6 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SlideImage = styled.img`
-opacity: 0.7;
 width: 100%;
 height: inherit;
 object-fit: cover;
@@ -34,9 +33,13 @@ const Caroussel = ({ slides }) => {
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
+
     return (
       <>
+        
+
         <StyledSlider>
+        { length <= 1 ? '': 
           <FontAwesomeIcon
             icon={faAngleLeft}
             color="white"
@@ -47,7 +50,7 @@ const Caroussel = ({ slides }) => {
             position: 'absolute',
             zIndex: '1' }}
           />
-
+          }
           {slides.map((slide, index) => {
             return (
               <div key={index}>
@@ -55,6 +58,7 @@ const Caroussel = ({ slides }) => {
               </div>
             );
           })}
+           { length <= 1 ? '': 
           <FontAwesomeIcon
             icon={faAngleRight}
             color="white"
@@ -64,6 +68,7 @@ const Caroussel = ({ slides }) => {
             left: '94%',
             position: 'absolute' }}
           />
+        }
         </StyledSlider>
       </>
     );
