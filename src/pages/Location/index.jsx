@@ -17,7 +17,7 @@ const CoverContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
 `;
 const SectionHeaderContainer = styled.div`
   display: flex;
@@ -50,20 +50,20 @@ margin-bottom: 10px;
 const HostContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: center;
 `;
 
 const HostName = styled.p`
   width: 5rem;
   font-size: 1.125rem;
   color: #ff6060;
-  margin: 20px;
+  margin: 0;
 `;
 
 const HostCover = styled.img`
   height: 65px;
   border-radius: 65px;
-  margin: 20px;
+  margin: 0;
 `;
 
 const TagListContainer = styled.div`
@@ -80,8 +80,25 @@ display:flex;
 flex-direction: row;
 justify-content: space-around;
 min-height: 300px;
+margin: 0 75px;
 `;
 
+const RatingStar = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+`;
+
+const InfoHostContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5%;
+  height: 100px;
+`;
 function Location() {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -139,11 +156,16 @@ function Location() {
                   </TagListContainer>
                 </LocTitleContainer>
 
-                <div>
+                <InfoHostContainer>
                   <HostContainer>
                     <HostName>{el.host.name}</HostName>
                     <HostCover src={el.host.picture}></HostCover>
                   </HostContainer>
+
+
+                  <RatingStar>
+
+
                   {ratingStar.map((el, i) => {
                     if (el >= 1) {
                       return (
@@ -163,7 +185,8 @@ function Location() {
                       );
                     }
                   })}
-                </div>
+                                    </RatingStar>
+                </InfoHostContainer>
               </SectionHeaderContainer>
 
                 <AccordionContainer>

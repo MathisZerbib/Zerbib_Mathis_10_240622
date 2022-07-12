@@ -6,8 +6,9 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AccordionCard = styled.div`
-  width: 40%;
+  width: 100%;
   justify-content: space-between;
+  margin: 20px;
 `;
 const AccordionTitle = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const AccordionTitle = styled.div`
   background-color: ${colors.primary};
   color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 `;
 const AccordionContent = styled.div`
   color: ${colors.primary};
