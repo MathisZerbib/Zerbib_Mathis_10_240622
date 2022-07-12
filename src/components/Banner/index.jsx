@@ -10,8 +10,8 @@ const BannerDiv = styled.div`
   position: relative;
   background: black;
   overflow: hidden;
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 30px auto;
+  max-width: 90%;
 `;
 
 const BannerImage = styled.img`

@@ -16,33 +16,35 @@ const CoverContainer = styled.div`
   border-radius: 25px;
   position: relative;
   overflow: hidden;
+  width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
 `;
 const SectionHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  place-content: space-around;
+  place-content: space-between;
+  margin: 0 5%;
 `;
 
 const LocTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  place-content: space-around;
 `;
 
 const LocTitle = styled.h2`
   font-size: 2.25rem;
   color: #ff6060;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  font-weight: 400;
 `;
 
 const LocSubTitle = styled.p`
-  font-size: 1.125rem;
-  color: #ff6060;
-  margin-top: 0;
+font-size: 1.125rem;
+color: #ff6060;
+margin-top: 0;
+text-align: left;
+margin-bottom: 10px;
 `;
 
 const HostContainer = styled.div`
@@ -70,11 +72,14 @@ const TagListContainer = styled.div`
   flex-direction: row;
   align-items: center;
   align-content: space-between;
+  margin: 20px 0px;
 `;
 
 const AccordionContainer = styled.div`
-margin: 2rem auto;
 display:flex;
+flex-direction: row;
+justify-content: space-around;
+min-height: 300px;
 `;
 
 function Location() {

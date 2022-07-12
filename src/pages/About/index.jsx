@@ -16,13 +16,13 @@ function About() {
 
           <AccordionContainer>
                   
-                  <Accordion title="Fiabilité" content={['Coucou']} />
+                  <Accordion title="Fiabilité" content={['La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.']} />
                   
                   <Accordion title="Respect" content={['La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.']} />
                 
-                  <Accordion title="Service" content={['Coucou']} />
+                  <Accordion title="Service" content={['La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.']}  />
 
-                  <Accordion title="Responsabilité" content={['Coucou']} />
+                  <Accordion title="Responsabilité" content={['La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.']}  />
 
               </AccordionContainer>
         </main>

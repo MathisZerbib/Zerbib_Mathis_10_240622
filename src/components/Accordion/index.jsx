@@ -6,8 +6,7 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AccordionCard = styled.div`
-  width: 600px;
-  margin: 2rem auto;
+  width: 40%;
   justify-content: space-between;
 `;
 const AccordionTitle = styled.div`
@@ -23,6 +22,53 @@ const AccordionTitle = styled.div`
 const AccordionContent = styled.div`
   color: ${colors.primary};
   padding: 1rem;
+  background: #f6f6f6;
+  text-align: initial;
+  text-decoration: inherit;
+  border-radius: 0 0 10px 10px;
+  line-height: 25.67px;
+  -webkit-animation: fadein 1s;
+  list-style: none;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s; 
+   -ms-animation: fadein 1s; 
+    -o-animation: fadein 1s; 
+       animation: fadein 1s;
+
+
+@keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+`;
+
+
+
+const AccordionContentList = styled.div`
+  color: ${colors.primary};
+  padding: 0.5rem;
   background: #f6f6f6;
   text-align: initial;
   text-decoration: inherit;
@@ -83,8 +129,8 @@ const Accordion = ({ title, content }) => {
       {/* TODO If Received array Then map it for equipments */}
 
       {isActive && Array.isArray(content) && content.map((el, index) => {
-        return (<AccordionContent key={index}><li>{el}
-          </li></AccordionContent>)
+        return (<AccordionContentList key={index}><li>{el}
+          </li></AccordionContentList>)
       })
     }
       {isActive && !Array.isArray(content) && <AccordionContent>{content}</AccordionContent>}

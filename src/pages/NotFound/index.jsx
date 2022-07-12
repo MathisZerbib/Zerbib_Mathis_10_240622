@@ -4,6 +4,7 @@ import styled from "styled-components";
 import colors from "utils/style/colors";
 
 const BigTitle = styled.h1`
+  margin-top: 50px;
   font-size: 18rem;
   color: ${colors.primary};
 `;

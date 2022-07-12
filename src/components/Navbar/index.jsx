@@ -8,7 +8,7 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90vw;
+  width: 90%;
   margin: 0 auto;
 `;
 

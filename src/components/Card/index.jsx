@@ -14,15 +14,15 @@ const CardContainer = styled.div`
     background: #F6F6F6;
     border-radius: 25px;
     width: 90%;
-    max-width: 1200px;
+    max-width: 90%;
     margin: 40px auto;
 `;
 const CardBody = styled.div`
     margin:30px;
     border-radius: 10px;
     position: relative;
-    height: 340px;
-    width: 340px;
+    height: 380px;
+    width: 380px;
     // background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%), url(${Thumbnail});
     background-repeat: no-repeat;
     background-size: cover;

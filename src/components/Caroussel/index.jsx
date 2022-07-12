@@ -3,24 +3,19 @@ import styled from "styled-components";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const SlideImage = styled.img`
-width: 100%;
-height: inherit;
-object-fit: cover;
-object-position: center;
-`;
-
 const StyledSlider = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: inherit;
-  object-fit: cover;
-  object-position: center;
+
+    border-radius: 25px;
+}
 `;
+const SlideImage = styled.div`
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 415px;
+`;
+
+
 
 const Caroussel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -35,7 +30,6 @@ const Caroussel = ({ slides }) => {
   };
 
     return (
-      <>
         <StyledSlider>
         { length <= 1 ? '': 
           <FontAwesomeIcon
@@ -45,18 +39,14 @@ const Caroussel = ({ slides }) => {
             size="4x"
             style={{ cursor: "pointer",
             right: '94%',
+            top: '50%',
+            transform:' translateY(-50%)',
             position: 'absolute',
             zIndex: '1' }}
           />
           }
-          {slides.map((slide, index) => {
-            return (
-              <div key={index}>
-                {index === current && <SlideImage src={slide} alt="" />}
-              </div>
-            );
-          })}
-           { length <= 1 ? '': 
+
+{ length <= 1 ? '': 
           <FontAwesomeIcon
             icon={faAngleRight}
             color="white"
@@ -64,11 +54,22 @@ const Caroussel = ({ slides }) => {
             size="4x"
             style={{ cursor: "pointer",
             left: '94%',
-            position: 'absolute' }}
+            top: '50%',
+            transform:' translateY(-50%)',
+            position: 'absolute',
+            zIndex: '1' }}
           />
         }
+
+          {slides.map((slide, index) => {
+            return (
+              <div key={index}>
+                {index === current && <SlideImage style={{backgroundImage:  `url(${slide})`}} />}
+              </div>
+            );
+          })}
+           
         </StyledSlider>
-      </>
     );
   };
 
