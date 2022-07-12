@@ -37,6 +37,7 @@ const LocTitle = styled.h2`
   color: #ff6060;
   margin-bottom: 5px;
   font-weight: 400;
+  text-align: left;
 `;
 
 const LocSubTitle = styled.p`
@@ -102,7 +103,7 @@ const InfoHostContainer = styled.div`
 function Location() {
   const { id } = useParams();
   const [data, setData] = useState([]);
-  const [isDataLoading, setDataLoading] = useState(false)
+  const [isDataLoading, setDataLoading] = useState(true)
 
   useEffect(() => {
     setDataLoading(true)
@@ -117,7 +118,7 @@ function Location() {
   }, [id]);
 
 
-  if(data.length === 0) {
+  if((data.length === 0 && !isDataLoading) || id.length !== 8) {
     return (<NotFound></NotFound>)
   }
 
