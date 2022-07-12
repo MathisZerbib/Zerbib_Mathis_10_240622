@@ -21,6 +21,10 @@ const ReturnToHome = styled.p`
   color: ${colors.primary};
 `;
 
+const PageContainer = styled.div`
+  margin: 100px auto;
+  `;
+
 
 
 
@@ -29,11 +33,11 @@ function NotFound() {
   return (
     <>
       <main>
-        <div>
+        <PageContainer>
             <BigTitle>404</BigTitle>
             <Subtitle>Oups! La page que vous demandez n'existe pas.</Subtitle>
             <NavLink to="/"><ReturnToHome>Retourner sur la page d’accueil</ReturnToHome></NavLink>
-        </div>
+        </PageContainer>
       </main>
     </>
   );

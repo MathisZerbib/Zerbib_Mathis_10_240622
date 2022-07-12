@@ -8,7 +8,7 @@ import colors from "utils/style/colors";
 import Tags from "components/Tags";
 import Accordion from "components/Accordion";
 import NotFound from "pages/NotFound";
-import { Loader } from "utils/style/atom";
+import { Loader, LoaderContainer } from "utils/style/atom";
 import Caroussel from "components/Caroussel";
 
 const CoverContainer = styled.div`
@@ -41,11 +41,11 @@ const LocTitle = styled.h2`
 `;
 
 const LocSubTitle = styled.p`
-font-size: 1.125rem;
-color: #ff6060;
-margin-top: 0;
-text-align: left;
-margin-bottom: 10px;
+  font-size: 1.125rem;
+  color: #ff6060;
+  margin-top: 0;
+  text-align: left;
+  margin-bottom: 10px;
 `;
 
 const HostContainer = styled.div`
@@ -77,11 +77,11 @@ const TagListContainer = styled.div`
 `;
 
 const AccordionContainer = styled.div`
-display:flex;
-flex-direction: row;
-justify-content: space-around;
-min-height: 300px;
-margin: 0 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 300px;
+  margin: 0 75px;
 `;
 
 const RatingStar = styled.div`
@@ -103,34 +103,33 @@ const InfoHostContainer = styled.div`
 function Location() {
   const { id } = useParams();
   const [data, setData] = useState([]);
-  const [isDataLoading, setDataLoading] = useState(true)
+  const [isDataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
-    setDataLoading(true)
+    setDataLoading(true);
     getLocationById(id).then((res) => {
-      console.log('res', res.lenght)
+      console.log("res", res.lenght);
 
-      setData(res)
-      setDataLoading(false)      
+      setData(res);
+      setDataLoading(false);
     });
-
-    
   }, [id]);
 
-
-  if((data.length === 0 && !isDataLoading) || id.length !== 8) {
-    return (<NotFound></NotFound>)
+  if ((data.length === 0 && !isDataLoading) || id.length !== 8) {
+    return <NotFound></NotFound>;
   }
-
 
   console.log("Data From Location", data[0], id.length);
 
   // do with `userId` what you need to load that user's data
   return (
-    <> 
+    <>
       {isDataLoading ? (
-        <Loader />
-      ) :data &&
+        <LoaderContainer>
+          <Loader />
+        </LoaderContainer>
+      ) : (
+        data &&
         data.length > 0 &&
         data.map((el, index) => {
           let ratingStar = [];
@@ -163,43 +162,39 @@ function Location() {
                     <HostCover src={el.host.picture}></HostCover>
                   </HostContainer>
 
-
                   <RatingStar>
-
-
-                  {ratingStar.map((el, i) => {
-                    if (el >= 1) {
-                      return (
-                        <FontAwesomeIcon
-                          key={i}
-                          icon={faStar}
-                          color={colors.primary}
-                        />
-                      );
-                    } else {
-                      return (
-                        <FontAwesomeIcon
-                          key={i}
-                          icon={faStar}
-                          color="#E3E3E3"
-                        />
-                      );
-                    }
-                  })}
-                                    </RatingStar>
+                    {ratingStar.map((el, i) => {
+                      if (el >= 1) {
+                        return (
+                          <FontAwesomeIcon
+                            key={i}
+                            icon={faStar}
+                            color={colors.primary}
+                          />
+                        );
+                      } else {
+                        return (
+                          <FontAwesomeIcon
+                            key={i}
+                            icon={faStar}
+                            color="#E3E3E3"
+                          />
+                        );
+                      }
+                    })}
+                  </RatingStar>
                 </InfoHostContainer>
               </SectionHeaderContainer>
 
-                <AccordionContainer>
-                  
-                  <Accordion title="Description" content={el.description} />
-                  
-                  <Accordion title="Equipments" content={el.equipments} />
-                
+              <AccordionContainer>
+                <Accordion title="Description" content={el.description} />
+
+                <Accordion title="Equipments" content={el.equipments} />
               </AccordionContainer>
             </div>
           );
-        })}
+        })
+      )}
     </>
   );
 }

@@ -1,5 +1,5 @@
-import colors from './colors'
-import styled, { keyframes } from 'styled-components'
+import colors from "./colors";
+import styled, { keyframes } from "styled-components";
 
 const rotate = keyframes`
   from {
@@ -8,7 +8,7 @@ const rotate = keyframes`
   to {
     transform: rotate(360deg);
   }
-`
+`;
 
 export const Loader = styled.div`
   padding: 10px;
@@ -18,4 +18,12 @@ export const Loader = styled.div`
   animation: ${rotate} 1s infinite linear;
   height: 0;
   width: 0;
-`
+`;
+
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+`;

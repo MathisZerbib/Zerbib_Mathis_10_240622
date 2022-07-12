@@ -11,13 +11,16 @@ import NotFound from "pages/NotFound";
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
+      <main>
+         <NavBar></NavBar>
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="/location/:id" element={<Location />} />
-      </Routes>
+      </Routes>     
+      </main>
+
       <Footer></Footer>
     </div>
   );

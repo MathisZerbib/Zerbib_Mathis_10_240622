@@ -73,7 +73,6 @@ const AccordionContentList = styled.div`
   background: #f6f6f6;
   text-align: initial;
   text-decoration: inherit;
-  border-radius: 0 0 10px 10px;
   -webkit-animation: fadein 1s;
   list-style: none;
   -moz-animation: fadein 1s;
@@ -87,6 +86,10 @@ const AccordionContentList = styled.div`
    -ms-animation: fadein 1s; 
     -o-animation: fadein 1s; 
        animation: fadein 1s;
+
+       :last-child {
+        border-radius: 0 0 10px 10px;
+      }
 
 
 @keyframes fadein {
@@ -130,8 +133,8 @@ const Accordion = ({ title, content }) => {
       {/* TODO If Received array Then map it for equipments */}
 
       {isActive && Array.isArray(content) && content.map((el, index) => {
-        return (<AccordionContentList key={index}><li>{el}
-          </li></AccordionContentList>)
+        return (<AccordionContentList key={index}>{el}
+          </AccordionContentList>)
       })
     }
       {isActive && !Array.isArray(content) && <AccordionContent>{content}</AccordionContent>}
