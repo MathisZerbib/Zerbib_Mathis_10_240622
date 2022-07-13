@@ -1,4 +1,5 @@
 import "./App.css";
+import "./utils/style/responsive.css";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 import Home from "./pages/Home";
@@ -11,7 +12,6 @@ import NotFound from "pages/NotFound";
 function App() {
   return (
     <div className="App">
-      <main>
          <NavBar></NavBar>
       <Routes>
         <Route path="*" element={<NotFound />} />
@@ -19,7 +19,6 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="/location/:id" element={<Location />} />
       </Routes>     
-      </main>
 
       <Footer></Footer>
     </div>

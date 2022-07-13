@@ -13,8 +13,8 @@ const NavContainer = styled.nav`
 `;
 
 const HomeLogo = styled.img`
-  max-height: 70px;
-  max-width: 200px;
+  max-height: 4.375rem;
+  max-width: 12.5rem;
 `;
 
 function Header() {
