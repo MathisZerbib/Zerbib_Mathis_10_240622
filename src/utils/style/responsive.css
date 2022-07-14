@@ -34,6 +34,10 @@
         .section-header-container {
         flex-direction: column;
     }
+
+    .info-host {
+        
+    }
 }
 
 

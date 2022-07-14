@@ -152,7 +152,7 @@ function Location() {
                   </TagListContainer>
                 </LocTitleContainer>
 
-                <InfoHostContainer>
+                <InfoHostContainer className="info-host">
                   <HostContainer>
                     <HostName>{el.host.name}</HostName>
                     <HostCover src={el.host.picture}></HostCover>
