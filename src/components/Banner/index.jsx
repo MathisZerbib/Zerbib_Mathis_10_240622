@@ -5,7 +5,6 @@ import LogoBanner from "../../assets/banner.png";
 
 
 const BannerDiv = styled.div`
-  height: 220px;
   border-radius: 25px;
   position: relative;
   background: black;
@@ -32,7 +31,7 @@ const BannerCaption = styled.h2`
 function Banner() {
     return (
       <>
-      <BannerDiv>
+      <BannerDiv className='banner-div'>
         <BannerImage src={LogoBanner}></BannerImage>
         <BannerCaption>Chez vous, partout ailleurs</BannerCaption>
       </BannerDiv>

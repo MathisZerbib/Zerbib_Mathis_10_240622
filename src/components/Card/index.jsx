@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Thumbnail from "../../assets/thumbnail.png";
 import { getLocations } from "services/Api";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -18,12 +17,9 @@ const CardContainer = styled.div`
   margin: 40px auto;
 `;
 const CardBody = styled.div`
-  margin: 30px;
   border-radius: 10px;
   position: relative;
-  height: 23.75rem;
-  width: 23.75rem;
-  // background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%), url(${Thumbnail});
+  height: 380px;
   background-repeat: no-repeat;
   background-size: cover;
 `;
@@ -66,6 +62,7 @@ function Card() {
                   style={{
                     backgroundImage: `url(${el.cover})`,
                   }}
+                  className="card-body"
                 >
                   <TitleCard>{el.title}</TitleCard>
                 </CardBody>

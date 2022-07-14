@@ -4,7 +4,6 @@ import Logo from "../../assets/logo_red.png";
 import React from "react";
 
 const NavContainer = styled.nav`
-  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,7 +20,7 @@ function Header() {
   const isLinkActive = (isActive) =>
     "nav-link" + (!isActive ? " unselected" : "");
   return (
-    <NavContainer>
+    <NavContainer className="nav-container">
       <NavLink to="/">
         <HomeLogo src={Logo} />
       </NavLink>

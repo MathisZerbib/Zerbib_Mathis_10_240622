@@ -21,10 +21,8 @@ const CoverContainer = styled.div`
 `;
 const SectionHeaderContainer = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: baseline;
   place-content: space-between;
-  margin: 0 5%;
 `;
 
 const LocTitleContainer = styled.div`
@@ -78,10 +76,9 @@ const TagListContainer = styled.div`
 
 const AccordionContainer = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   min-height: 300px;
-  margin: 0 75px;
+  margin: 0 4.375rem;
 `;
 
 const RatingStar = styled.div`
@@ -97,7 +94,6 @@ const InfoHostContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0 5%;
   height: 100px;
 `;
 function Location() {
@@ -147,7 +143,7 @@ function Location() {
                 <Caroussel slides={el.pictures} />
               </CoverContainer>
 
-              <SectionHeaderContainer>
+              <SectionHeaderContainer className="section-header-container">
                 <LocTitleContainer>
                   <LocTitle>{el.title}</LocTitle>
                   <LocSubTitle>{el.location}</LocSubTitle>
@@ -186,7 +182,7 @@ function Location() {
                 </InfoHostContainer>
               </SectionHeaderContainer>
 
-              <AccordionContainer>
+              <AccordionContainer className="accordion-container">
                 <Accordion title="Description" content={el.description} />
 
                 <Accordion title="Equipments" content={el.equipments} />

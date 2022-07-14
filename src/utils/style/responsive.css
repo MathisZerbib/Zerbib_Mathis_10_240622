@@ -1,4 +1,7 @@
 @media only screen and (max-width: 1024px) {
+
+    /* Navigaton  */
+
     .nav-link {
         display: flex;
         text-align: left;
@@ -6,10 +9,54 @@
     .nav-link:not([aria-current]) {
         text-decoration: none;
     }
+
+    /* Card Logement */
+
+    .card-body {
+        margin: 20px;
+        width: 300px;
+    }
+
+    /* Banner  */
+    .banner-div {
+        height: 130px;
+    }
+    .banner-div h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .accordion-container {
+        flex-direction: column;
+    }
+
+
+        .section-header-container {
+        flex-direction: column;
+    }
 }
 
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
+
+    .card-body {
+        margin: 30px;
+        width: 380px;
+    }
+    .banner-div {
+        height: 220px;
+    }
+
+
+
+    .nav-container {
+        padding: 30px;
+    }
+
+    
+    .accordion-container {
+        flex-direction: row;
+    }
 
 }
