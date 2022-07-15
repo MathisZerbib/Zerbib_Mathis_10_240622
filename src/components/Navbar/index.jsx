@@ -7,8 +7,6 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
 `;
 
 const HomeLogo = styled.img`

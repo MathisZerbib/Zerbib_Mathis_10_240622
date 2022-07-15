@@ -12,9 +12,8 @@ const CardContainer = styled.div`
   justify-content: center;
   background: #f6f6f6;
   border-radius: 25px;
-  width: 90%;
+  width: 77rem;
   max-width: 90%;
-  margin: 40px auto;
 `;
 const CardBody = styled.div`
   border-radius: 10px;

@@ -91,10 +91,10 @@ const RatingStar = styled.div`
 
 const InfoHostContainer = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 100px;
+  width: 100%;
 `;
 function Location() {
   const { id } = useParams();
