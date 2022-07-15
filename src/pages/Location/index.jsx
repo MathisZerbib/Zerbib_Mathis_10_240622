@@ -17,7 +17,6 @@ const CoverContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 90%;
-  margin: 30px auto;
 `;
 const SectionHeaderContainer = styled.div`
   display: flex;
@@ -138,7 +137,7 @@ function Location() {
           console.log(el.rating, ratingStar);
 
           return (
-            <div key={index}>
+            <div className="container-location" key={index}>
               <CoverContainer>
                 <Caroussel slides={el.pictures} />
               </CoverContainer>

@@ -12,9 +12,9 @@ import NotFound from "pages/NotFound";
 function App() {
   return (
     <div className="App">
-               <NavBar></NavBar>          
 
 <div className="main-container">
+    <NavBar></NavBar>          
 
       <Routes>
         <Route path="*" element={<NotFound />} />

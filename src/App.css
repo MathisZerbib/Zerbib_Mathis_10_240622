@@ -5,7 +5,9 @@
 .App {
   text-align: center;
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -44,7 +46,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: -webkit-fill-available;
+  height: 100%;
+}
+.container-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 

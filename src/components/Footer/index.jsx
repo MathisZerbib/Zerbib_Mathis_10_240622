@@ -3,6 +3,7 @@ import Logo from "../../assets/logo_white.png";
 import React from "react";
 
 const FooterContainer = styled.div`
+  width: 100%;
   height: 150px;
   border-radius: 0px;
   background: black;
