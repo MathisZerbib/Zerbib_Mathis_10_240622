@@ -7,7 +7,7 @@ const FooterContainer = styled.div`
   height: 150px;
   border-radius: 0px;
   background: black;
-  padding: 30px;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
