@@ -17,10 +17,10 @@ function App() {
     <NavBar></NavBar>          
 
       <Routes>
-        <Route path="Zerbib_Mathis_10_24062022/*" element={<NotFound />} />
-        <Route path="Zerbib_Mathis_10_24062022/" element={<Home />} />
-        <Route path="Zerbib_Mathis_10_24062022/about" element={<About />} />
-        <Route path="Zerbib_Mathis_10_24062022/location/:id" element={<Location />} />
+        <Route path="https://mathiszerbib.github.io/Zerbib_Mathis_10_24062022/*" element={<NotFound />} />
+        <Route path="https://mathiszerbib.github.io/Zerbib_Mathis_10_24062022/" element={<Home />} />
+        <Route path="https://mathiszerbib.github.io/Zerbib_Mathis_10_24062022/about" element={<About />} />
+        <Route path="https://mathiszerbib.github.io/Zerbib_Mathis_10_24062022/location/:id" element={<Location />} />
       </Routes>     
     </div>
       <Footer></Footer>
