@@ -21,7 +21,7 @@ function Header() {
     "nav-link" + (!isActive ? " unselected" : "");
   return (
     <NavContainer className="nav-container">
-      <NavLink to="/">
+      <NavLink to="/Zerbib_Mathis_10_24062022/">
         <HomeLogo src={Logo} />
       </NavLink>
       <div>
