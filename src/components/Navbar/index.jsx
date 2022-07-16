@@ -25,7 +25,7 @@ function Header() {
         <HomeLogo src={Logo} />
       </NavLink>
       <div>
-        <NavLink className={isLinkActive} to="/">
+        <NavLink className={isLinkActive} to="/home">
           Accueil
         </NavLink>
         <NavLink className={isLinkActive} to="/about">
