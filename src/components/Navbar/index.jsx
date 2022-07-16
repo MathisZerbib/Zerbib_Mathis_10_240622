@@ -21,7 +21,7 @@ function Header() {
     "nav-link" + (!isActive ? " unselected" : "");
 
     const gitPath = "/Zerbib_Mathis_10_24062022";
-    const localPath = "/"
+    const localPath = ""
     console.log(localPath, gitPath)
 
   return (
