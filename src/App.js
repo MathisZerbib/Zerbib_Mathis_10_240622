@@ -10,9 +10,8 @@ import Footer from "components/Footer";
 import NotFound from "pages/NotFound";
 
 function App() {
-  const gitPath = "/Zerbib_Mathis_10_24062022";
-  const localPath = "/"
-  console.log(localPath, gitPath)
+  const pathName = window.location.pathname
+  console.log("pathname", pathName)
   return (
     <div className="App">
 
@@ -20,10 +19,10 @@ function App() {
     <NavBar></NavBar>          
 
       <Routes>
-        <Route path={localPath+"/*" }element={<NotFound />} />
-        <Route path={localPath+"/"} element={<Home />} />
-        <Route path={localPath+"/about"} element={<About />} />
-        <Route path={localPath+"/location/:id"} element={<Location />} />
+        <Route path={pathName+"*" }element={<NotFound />} />
+        <Route path={pathName} element={<Home />} />
+        <Route path={pathName+"about"} element={<About />} />
+        <Route path={pathName+"location/:id"} element={<Location />} />
       </Routes>     
     </div>
       <Footer></Footer>
