@@ -46,7 +46,7 @@ function Card() {
   }, []);
   const gitPath = "/Zerbib_Mathis_10_24062022";
   const localPath = "/"
-  console.log(localPath)
+  console.log(localPath, gitPath)
 
   return (
     <>

@@ -22,18 +22,18 @@ function Header() {
 
     const gitPath = "/Zerbib_Mathis_10_24062022";
     const localPath = "/"
-    console.log(localPath)
+    console.log(localPath, gitPath)
 
   return (
     <NavContainer className="nav-container">
-      <NavLink to={gitPath+"/"}>
+      <NavLink to={localPath+"/"}>
         <HomeLogo src={Logo} />
       </NavLink>
       <div>
-        <NavLink className={isLinkActive} to={gitPath+"/"}>
+        <NavLink className={isLinkActive} to={localPath+"/"}>
           Accueil
         </NavLink>
-        <NavLink className={isLinkActive} to={gitPath+"/about"}>
+        <NavLink className={isLinkActive} to={localPath+"/about"}>
           A propos
         </NavLink>
       </div>

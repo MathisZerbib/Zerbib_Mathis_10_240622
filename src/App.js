@@ -12,7 +12,7 @@ import NotFound from "pages/NotFound";
 function App() {
   const gitPath = "/Zerbib_Mathis_10_24062022";
   const localPath = "/"
-  console.log(localPath)
+  console.log(localPath, gitPath)
   return (
     <div className="App">
 
@@ -20,10 +20,10 @@ function App() {
     <NavBar></NavBar>          
 
       <Routes>
-        <Route path={gitPath+"/*" }element={<NotFound />} />
-        <Route path={gitPath+"/"} element={<Home />} />
-        <Route path={gitPath+"/about"} element={<About />} />
-        <Route path={gitPath+"/location/:id"} element={<Location />} />
+        <Route path={localPath+"/*" }element={<NotFound />} />
+        <Route path={localPath+"/"} element={<Home />} />
+        <Route path={localPath+"/about"} element={<About />} />
+        <Route path={localPath+"/location/:id"} element={<Location />} />
       </Routes>     
     </div>
       <Footer></Footer>
