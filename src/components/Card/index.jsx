@@ -44,6 +44,10 @@ function Card() {
       setDataLoading(false);
     });
   }, []);
+  const gitPath = "/Zerbib_Mathis_10_24062022";
+  const localPath = "/"
+  console.log(localPath)
+
   return (
     <>
       <CardContainer>
@@ -56,7 +60,7 @@ function Card() {
           data.length > 0 &&
           data.map((el, i) => {
             return (
-              <Link key={i} to={{ pathname: "/Zerbib_Mathis_10_24062022/location/" + el.id }}>
+              <Link key={i} to={{ pathname: gitPath + "/location/" + el.id }}>
                 <CardBody
                   style={{
                     backgroundImage: `url(${el.cover})`,

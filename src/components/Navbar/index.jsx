@@ -19,16 +19,21 @@ const HomeLogo = styled.img`
 function Header() {
   const isLinkActive = (isActive) =>
     "nav-link" + (!isActive ? " unselected" : "");
+
+    const gitPath = "/Zerbib_Mathis_10_24062022";
+    const localPath = "/"
+    console.log(localPath)
+
   return (
     <NavContainer className="nav-container">
-      <NavLink to="/Zerbib_Mathis_10_24062022/">
+      <NavLink to={gitPath+"/"}>
         <HomeLogo src={Logo} />
       </NavLink>
       <div>
-        <NavLink className={isLinkActive} to="/Zerbib_Mathis_10_24062022/">
+        <NavLink className={isLinkActive} to={gitPath+"/"}>
           Accueil
         </NavLink>
-        <NavLink className={isLinkActive} to="/Zerbib_Mathis_10_24062022/about">
+        <NavLink className={isLinkActive} to={gitPath+"/about"}>
           A propos
         </NavLink>
       </div>
