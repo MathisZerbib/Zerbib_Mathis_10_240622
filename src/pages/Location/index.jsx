@@ -16,7 +16,7 @@ const CoverContainer = styled.div`
   border-radius: 25px;
   position: relative;
   overflow: hidden;
-  width: 90%;
+  width: 100%;
 `;
 const SectionHeaderContainer = styled.div`
   display: flex;
@@ -66,18 +66,14 @@ const HostCover = styled.img`
 
 const TagListContainer = styled.div`
   display: flex;
-  flex: 1 1 100%;
-  flex-direction: row;
-  align-items: center;
-  align-content: space-between;
-  margin: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const AccordionContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   min-height: 300px;
-  margin: 0 4.375rem;
 `;
 
 const RatingStar = styled.div`
@@ -90,7 +86,6 @@ const RatingStar = styled.div`
 
 const InfoHostContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 100px;
   width: 100%;
@@ -138,7 +133,7 @@ function Location() {
 
           return (
             <div className="container-location" key={index}>
-              <CoverContainer>
+              <CoverContainer className="cover-container">
                 <Caroussel slides={el.pictures} />
               </CoverContainer>
 

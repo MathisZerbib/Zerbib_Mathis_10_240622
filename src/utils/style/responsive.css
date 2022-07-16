@@ -1,3 +1,7 @@
+/* PHONE AND TABLETTE */
+
+
+
 @media only screen and (max-width: 1024px) {
 
     /* Navigaton  */
@@ -6,14 +10,25 @@
         margin: 20px;
     }
 
+    .nav-container img {
+        max-height: 3rem;
+        max-width: 12.5rem;
+    }
+    .nav-container div {
+        display: flex;
+        align-items: center;
+    }
     .nav-link {
         display: flex;
         text-align: left;
+        font-size: 16px;
+
     }
     .nav-link:not([aria-current]) {
         text-decoration: none;
     }
 
+    
     /* Card Logement */
 
     .card-body {
@@ -31,21 +46,47 @@
         justify-content: center;
     }
     .banner-div h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     
     .banner-div
     {
-        min-height: 32vh;
+        min-height: 20vh;
     }
     .banner-div img
     {
-        min-height: 32vh;
+        min-height: 20vh;
     }
 
+    /* Caroussel */
+
+    svg.svg-inline--fa.fa-angle-left.fa-4x {
+        right: 88%;
+    }
+
+     svg.svg-inline--fa.fa-angle-right.fa-4x {
+        left: 88%;
+    }
+
+    .cover-container {
+        width: 90%;
+    }
+ 
     .accordion-container {
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
+        margin: 0;
+    }
+
+    .accordion-container > div:nth-child(1) {
+        width: 90%;
+        margin:10px 0;
+    }
+    .accordion-container > div:nth-child(2) {
+        width: 90%;
+        margin:10px 0;
     }
 
 
@@ -55,16 +96,49 @@
 
     .info-host {
         flex-direction: row-reverse;
+        align-items: center;
     }
 
     .host-container {
         flex-direction: column;
     }
+
+    /* .section-header-container {
+        width: 90%;
+    } */
+
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
+
 @media only screen and (min-width: 1024px) {
+
+
+    .main-container {
+        width: 80%;
+    }
 
     .card-body {
         margin: 30px;
@@ -78,6 +152,8 @@
         height: 14vw;
     } */
 
+
+    /* Banner */
     .banner-div {
         display: flex;
 
@@ -87,14 +163,35 @@
         padding: 30px;
     }
 
-    
+
+    /* Caroussel  */
+
+    .cover-container {
+        width: 95%;
+    }
+    .container-location:first-child {
+        width: 100%;
+    }
+    svg.svg-inline--fa.fa-angle-left.fa-4x {
+        right: 94%;
+    }
+
+     svg.svg-inline--fa.fa-angle-right.fa-4x {
+        left: 94%;
+    }
+    .section-header-container{
+        width: 100%;
+    }
     .accordion-container {
         flex-direction: row;
     }
 
+    
 
     .info-host {
         flex-direction: column;
+        align-items: end;
     }
+    
 
 }

@@ -38,7 +38,6 @@ const Caroussel = ({ slides }) => {
             onClick={prevSlide}
             size="4x"
             style={{ cursor: "pointer",
-            right: '94%',
             top: '50%',
             transform:' translateY(-50%)',
             position: 'absolute',
@@ -53,7 +52,6 @@ const Caroussel = ({ slides }) => {
             onClick={nextSlide}
             size="4x"
             style={{ cursor: "pointer",
-            left: '94%',
             top: '50%',
             transform:' translateY(-50%)',
             position: 'absolute',

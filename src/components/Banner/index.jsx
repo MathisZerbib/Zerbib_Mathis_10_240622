@@ -23,9 +23,10 @@ const BannerCaption = styled.h2`
   font-size: 2rem;
   color: white;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin: auto;
 `;
 
 function Banner() {
