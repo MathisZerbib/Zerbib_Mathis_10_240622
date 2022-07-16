@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Zerbib_Mathis_10_24062022/static/css/main.467bac42.css",
-    "main.js": "/Zerbib_Mathis_10_24062022/static/js/main.5d447bdf.js",
+    "main.js": "/Zerbib_Mathis_10_24062022/static/js/main.07f22a93.js",
     "static/js/787.cca3b672.chunk.js": "/Zerbib_Mathis_10_24062022/static/js/787.cca3b672.chunk.js",
     "static/media/banner.png": "/Zerbib_Mathis_10_24062022/static/media/banner.024f945a990ae17b81b7.png",
     "index.html": "/Zerbib_Mathis_10_24062022/index.html",
     "main.467bac42.css.map": "/Zerbib_Mathis_10_24062022/static/css/main.467bac42.css.map",
-    "main.5d447bdf.js.map": "/Zerbib_Mathis_10_24062022/static/js/main.5d447bdf.js.map",
+    "main.07f22a93.js.map": "/Zerbib_Mathis_10_24062022/static/js/main.07f22a93.js.map",
     "787.cca3b672.chunk.js.map": "/Zerbib_Mathis_10_24062022/static/js/787.cca3b672.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.467bac42.css",
-    "static/js/main.5d447bdf.js"
+    "static/js/main.07f22a93.js"
   ]
 }
