@@ -17,10 +17,10 @@ function App() {
     <NavBar></NavBar>          
 
       <Routes>
-        <Route path="*" element={<NotFound />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="/location/:id" element={<Location />} />
+        <Route path="Zerbib_Mathis_10_24062022/*" element={<NotFound />} />
+        <Route path="Zerbib_Mathis_10_24062022/" element={<Home />} />
+        <Route path="Zerbib_Mathis_10_24062022/about" element={<About />} />
+        <Route path="Zerbib_Mathis_10_24062022/location/:id" element={<Location />} />
       </Routes>     
     </div>
       <Footer></Footer>
