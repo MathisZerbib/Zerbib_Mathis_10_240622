@@ -1,7 +1,4 @@
 /* PHONE AND TABLETTE */
-
-
-
 @media only screen and (max-width: 1024px) {
 
     /* Navigaton  */
@@ -145,13 +142,13 @@
         margin: 30px;
         width: 350px;
     }
-    /* .banner-div {
-        height: 14vw;
+    .banner-div {
+        height: 18vw;
     }
     .banner-div img
     {
-        height: 14vw;
-    } */
+        height: 18vw;
+    }
 
 
     /* Banner */
