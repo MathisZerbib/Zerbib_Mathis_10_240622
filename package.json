@@ -20,7 +20,7 @@
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://MathisZerbib.github.io/Zerbib_Mathis_10_24062022/",
+  "homepage": "https://mathiszerbib.github.io/Zerbib_Mathis_10_24062022/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build", 
