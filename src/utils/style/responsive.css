@@ -138,6 +138,7 @@
 
     .main-container {
         width: 80%;
+        min-height: 65vh;
     }
 
     .card-body {
