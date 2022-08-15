@@ -104,6 +104,12 @@
         width: 90%;
     } */
 
+
+    /* 404 Page  */
+
+    .big404 {
+        font-size: 10rem;
+    }
 }
 
 
@@ -193,4 +199,9 @@
     }
     
 
+    /* 404 Page  */
+
+    .big404 {
+        font-size: 18rem;
+    }
 }

@@ -73,4 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-<!-- Reduire font size  404 on mobile  -->
+<!-- Reduire font size  404 on mobile 
+Changer les favicon.ico et les png icons
+
+exporter components {as Compoenent} from "exmple.jsx" pour lisibilité et faciliter la maintenance
+ -->

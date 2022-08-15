@@ -5,7 +5,6 @@ import colors from "utils/style/colors";
 
 const BigTitle = styled.h1`
   margin-top: 50px;
-  font-size: 18rem;
   color: ${colors.primary};
 `;
 
@@ -34,8 +33,8 @@ function NotFound() {
     <>
       <main>
         <PageContainer>
-            <BigTitle>404</BigTitle>
-            <Subtitle>Oups! La page que vous demandez n'existe pas.</Subtitle>
+            <BigTitle className="big404">404</BigTitle>
+            <Subtitle className="sub404">Oups! La page que vous demandez n'existe pas.</Subtitle>
             <NavLink to="/"><ReturnToHome>Retourner sur la page d’accueil</ReturnToHome></NavLink>
         </PageContainer>
       </main>

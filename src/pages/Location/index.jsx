@@ -98,8 +98,6 @@ function Location() {
   useEffect(() => {
     setDataLoading(true);
     getLocationById(id).then((res) => {
-      console.log("res", res.lenght);
-
       setData(res);
       setDataLoading(false);
     });
@@ -108,10 +106,7 @@ function Location() {
   if ((data.length === 0 && !isDataLoading) || id.length !== 8) {
     return <NotFound></NotFound>;
   }
-
-  console.log("Data From Location", data[0], id.length);
-
-  // do with `userId` what you need to load that user's data
+  // Do with { userId } what you need to load that user's data
   return (
     <>
       {isDataLoading ? (
@@ -129,8 +124,6 @@ function Location() {
           while (ratingStar.length < 5) {
             ratingStar.push(0);
           }
-          console.log(el.rating, ratingStar);
-
           return (
             <div className="container-location" key={index}>
               <CoverContainer className="cover-container">

@@ -39,14 +39,10 @@ function Card() {
 
   useEffect(() => {
     setDataLoading(true);
-    getLocations().then((res) => {
-      setData(res.data);
+      setData(getLocations());
       setDataLoading(false);
-    });
   }, []);
 
-  const pathName = window.location.pathname
-  console.log("pathname", pathName)
 
   return (
     <>
@@ -60,7 +56,7 @@ function Card() {
           data.length > 0 &&
           data.map((el, i) => {
             return (
-              <Link key={i} to={{ pathname: pathName + "location/" + el.id }}>
+              <Link key={i} to={{ pathname: "location/" + el.id }}>
                 <CardBody
                   style={{
                     backgroundImage: `url(${el.cover})`,

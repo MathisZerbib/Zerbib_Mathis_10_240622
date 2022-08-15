@@ -19,18 +19,17 @@ const HomeLogo = styled.img`
 function Header() {
   const isLinkActive = (isActive) =>
     "nav-link" + (!isActive ? " unselected" : "");
-    const pathName = window.location.pathname
 
   return (
     <NavContainer className="nav-container">
-      <NavLink to={pathName+"/"}>
+      <NavLink to={"/"}>
         <HomeLogo src={Logo} />
       </NavLink>
       <div>
-        <NavLink className={isLinkActive} to={pathName}>
+        <NavLink className={isLinkActive} to={"/"}>
           Accueil
         </NavLink>
-        <NavLink className={isLinkActive} to={pathName+"about"}>
+        <NavLink className={isLinkActive} to={"about"}>
           A propos
         </NavLink>
       </div>

@@ -1,13 +1,17 @@
-import axios from "axios";
-// import db from "db.json";
+import data from "./data.json";
 
-const apiUrl = './db.json';
 export const getLocations = () => {
-  return axios.get(apiUrl);
+    return data;
+
 }
 
 
 export const getLocationById = async (id) => {
-  const response = await axios.get("../db.json");
-  return response.data.filter(location => location.id === id);
+  const response = getLocations();
+  return response.filter(location => location.id === id);
 }
+
+
+
+
+
