@@ -1,7 +1,6 @@
-import Banner from "components/Banner";
 import React from "react";
 import styled from "styled-components";
-import Accordion from "../../components/Accordion";
+import { Accordion, Banner } from "../../components";
 
 const AccordionContainer = styled.div`
   margin: 0 auto;

@@ -16,7 +16,7 @@ const HomeLogo = styled.img`
   max-width: 12.5rem;
 `;
 
-function Header() {
+function Navbar() {
   const isLinkActive = (isActive) =>
     "nav-link" + (!isActive ? " unselected" : "");
 
@@ -37,4 +37,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;

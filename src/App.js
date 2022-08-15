@@ -3,14 +3,13 @@ import "./utils/style/responsive.css";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 import{ Home, About, Location, NotFound} from "./pages";
-import NavBar from "./components/Navbar";
-import Footer from "components/Footer";
+import { Footer, Navbar} from "./components";
 
 function App() {
   return (
     <div className="App">
       <div className="main-container">
-        <NavBar></NavBar>
+        <Navbar></Navbar>
 
         <Routes>
           <Route path={"*"} element={<NotFound />} />

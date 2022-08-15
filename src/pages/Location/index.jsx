@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getLocationById } from "services/Api";
 import styled from "styled-components";
+import colors from "utils/style/colors";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import colors from "utils/style/colors";
-import Tags from "components/Tags";
-import Accordion from "components/Accordion";
-import NotFound from "pages/NotFound";
+
+import { Accordion, Caroussel, Tags} from "components";
+import { NotFound } from "pages";
+
 import { Loader, LoaderContainer } from "utils/style/atom";
-import Caroussel from "components/Caroussel";
+import { getLocationById } from "services/Api";
 
 const CoverContainer = styled.div`
   height: 415px;
