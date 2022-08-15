@@ -52,7 +52,7 @@ const HostContainer = styled.div`
 `;
 
 const HostName = styled.p`
-  width: 5rem;
+  width 50%;
   font-size: 1.125rem;
   color: #ff6060;
   margin: 0;

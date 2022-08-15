@@ -10,21 +10,18 @@ import Footer from "components/Footer";
 import NotFound from "pages/NotFound";
 
 function App() {
-  const pathName = window.location.pathname
-  console.log("pathname", pathName)
   return (
     <div className="App">
+      <div className="main-container">
+        <NavBar></NavBar>
 
-<div className="main-container">
-    <NavBar></NavBar>          
-
-      <Routes>
-        <Route path={pathName+"*" }element={<NotFound />} />
-        <Route path={pathName} element={<Home />} />
-        <Route path={pathName+"about"} element={<About />} />
-        <Route path={pathName+"location/:id"} element={<Location />} />
-      </Routes>     
-    </div>
+        <Routes>
+          <Route path={"*"} element={<NotFound />} />
+          <Route path={"/"} element={<Home />} />
+          <Route path={"about"} element={<About />} />
+          <Route path={"location/:id"} element={<Location />} />
+        </Routes>
+      </div>
       <Footer></Footer>
     </div>
   );
