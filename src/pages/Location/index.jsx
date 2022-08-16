@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
 import colors from "utils/style/colors";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,85 +11,6 @@ import { NotFound } from "pages";
 import { Loader, LoaderContainer } from "utils/style/atom";
 import { getLocationById } from "services/Api";
 
-const CoverContainer = styled.div`
-  height: 415px;
-  border-radius: 25px;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-`;
-const SectionHeaderContainer = styled.div`
-  display: flex;
-  align-items: baseline;
-  place-content: space-between;
-`;
-
-const LocTitleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const LocTitle = styled.h2`
-  font-size: 2.25rem;
-  color: #ff6060;
-  margin-bottom: 5px;
-  font-weight: 400;
-  text-align: left;
-`;
-
-const LocSubTitle = styled.p`
-  font-size: 1.125rem;
-  color: #ff6060;
-  margin-top: 0;
-  text-align: left;
-  margin-bottom: 10px;
-`;
-
-const HostContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-const HostName = styled.p`
-  width 50%;
-  font-size: 1.125rem;
-  color: #ff6060;
-  margin: 0;
-`;
-
-const HostCover = styled.img`
-  height: 65px;
-  border-radius: 65px;
-  margin: 0;
-`;
-
-const TagListContainer = styled.div`
-  display: flex;
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const AccordionContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  min-height: 300px;
-`;
-
-const RatingStar = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-`;
-
-const InfoHostContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  width: 100%;
-`;
 function Location() {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -127,26 +47,26 @@ function Location() {
           }
           return (
             <div className="container-location" key={index}>
-              <CoverContainer className="cover-container">
+              <div className="cover-container coverContainer">
                 <Caroussel slides={el.pictures} />
-              </CoverContainer>
+              </div>
 
-              <SectionHeaderContainer className="section-header-container">
-                <LocTitleContainer>
-                  <LocTitle>{el.title}</LocTitle>
-                  <LocSubTitle>{el.location}</LocSubTitle>
-                  <TagListContainer>
+              <div className="section-header-container sectionHeaderContainer">
+                <div className="locTitleContainer">
+                  <h2 className="locTitle">{el.title}</h2>
+                  <p className="locSubtitle">{el.location}</p>
+                  <div className="tagListContainer">
                     <Tags tags={el.tags}></Tags>
-                  </TagListContainer>
-                </LocTitleContainer>
+                  </div>
+                </div>
 
-                <InfoHostContainer className="info-host">
-                  <HostContainer>
-                    <HostName>{el.host.name}</HostName>
-                    <HostCover src={el.host.picture}></HostCover>
-                  </HostContainer>
+                <div className="info-host infoHostContainer">
+                  <div className="hostContainer">
+                    <p className="hostName">{el.host.name}</p>
+                    <img className="hostCover" src={el.host.picture} alt={el.host.name} />
+                  </div>
 
-                  <RatingStar>
+                  <div className="ratingStar">
                     {ratingStar.map((el, i) => {
                       if (el >= 1) {
                         return (
@@ -166,15 +86,15 @@ function Location() {
                         );
                       }
                     })}
-                  </RatingStar>
-                </InfoHostContainer>
-              </SectionHeaderContainer>
+                  </div>
+                </div>
+              </div>
 
-              <AccordionContainer className="accordion-container">
+              <div className="accordion-container accordionContainer">
                 <Accordion title="Description" content={el.description} />
 
                 <Accordion title="Equipments" content={el.equipments} />
-              </AccordionContainer>
+              </div>
             </div>
           );
         })

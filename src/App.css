@@ -65,6 +65,11 @@
 .nav-link:not([aria-current]) { text-decoration: none;}
 
 
+
+
+/* Accordion */
+
+
 .accordionCard {
   width: 100%;
   justify-content: space-between;
@@ -171,3 +176,238 @@ to   { opacity: 1; }
 from { opacity: 0; }
 to   { opacity: 1; }
 }
+
+
+
+/* Banner */
+
+.bannerDiv {
+  border-radius: 25px;
+  position: relative;
+  background: black;
+  overflow: hidden;
+  max-width: 90%;
+  margin: 20px auto;
+
+}
+
+.bannerImage {
+  opacity: 0.7;
+  width: 100%;
+  height: inherit;
+}
+
+.bannerCaption {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+
+/* Location */
+.coverContainer {
+  height: 415px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sectionHeaderContainer {
+  display: flex;
+  align-items: baseline;
+  place-content: space-between;
+}
+
+.locTitleContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.locTitle {
+  font-size: 2.25rem;
+  color: #ff6060;
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.locSubtitle {
+  font-size: 1.125rem;
+  color: #ff6060;
+  margin-top: 0;
+  text-align: left;
+  margin-bottom: 10px;
+
+}
+
+.hostContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hostName {
+  width: 50%;
+  font-size: 1.125rem;
+  color: #ff6060;
+  margin: 0;
+}
+.hostCover {
+  height: 65px;
+  border-radius: 65px;
+  margin: 0;
+}
+.tagListContainer {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accordionContainer {
+  display: flex;
+  justify-content: flex-start;
+  min-height: 300px;
+}
+
+.ratingStar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.infoHostContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+}
+
+
+/* About */
+
+.aboutAccordionContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+/* Footer */
+
+.footerContainer {
+  width: 100%;
+  height: 150px;
+  border-radius: 0px;
+  background: black;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footerLogo {
+  margin: auto;
+}
+
+.copyright {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* 404 Not Found */
+
+.bigTitle {
+  color: #FF6060;
+  margin-top: 50px;
+}
+
+.subtitle {
+  color: #FF6060;
+  font-size: 2.25rem;
+}
+
+.returnHome {
+  color: #FF6060;
+  font-size: 1.25rem;
+}
+
+.pageContainer {
+  margin: 100px auto;
+}
+
+
+
+/* NavBar */
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 77rem;
+  max-width: 90%;
+}
+
+.homeLogo {
+  max-height: 4.375rem;
+  max-width: 12.5rem;
+}
+
+
+
+/* Caroussel */ 
+.styledSlider {
+  border-radius: 25px;
+
+}
+
+.slideImage {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 415px;
+}
+
+/* Card */
+
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #f6f6f6;
+  border-radius: 25px;
+  width: 77rem;
+  max-width: 90%;
+}
+
+.cardBody {
+  border-radius: 10px;
+  position: relative;
+  height: 380px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleCard {
+  font-size: 1rem;
+  color: white;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  right: 25px;
+  line-height: 25px;
+}
+

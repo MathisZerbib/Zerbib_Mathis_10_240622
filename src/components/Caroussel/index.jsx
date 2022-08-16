@@ -1,21 +1,7 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const StyledSlider = styled.div`
-
-    border-radius: 25px;
-}
-`;
-const SlideImage = styled.div`
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-height: 415px;
-`;
-
-
 
 const Caroussel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -30,7 +16,7 @@ const Caroussel = ({ slides }) => {
   };
 
     return (
-        <StyledSlider>
+        <div className="styledSlider">
         { length <= 1 ? '': 
           <FontAwesomeIcon
             icon={faAngleLeft}
@@ -58,16 +44,15 @@ const Caroussel = ({ slides }) => {
             zIndex: '1' }}
           />
         }
-
           {slides.map((slide, index) => {
             return (
               <div key={index}>
-                {index === current && <SlideImage style={{backgroundImage:  `url(${slide})`}} />}
+                {index === current && <div className="slideImage" style={{backgroundImage:  `url(${slide})`}}> </div>}
               </div>
             );
           })}
            
-        </StyledSlider>
+        </div>
     );
   };
 
