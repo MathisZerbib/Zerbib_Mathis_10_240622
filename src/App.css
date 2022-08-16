@@ -294,7 +294,6 @@ to   { opacity: 1; }
   display: flex;
   justify-content: space-between;
   height: 100px;
-  width: 100%;
 }
 
 
@@ -422,4 +421,19 @@ to   { opacity: 1; }
 
 
 
-/*  */
+/* Tags */
+
+
+.tagList {
+  padding: 5px 0px;
+  margin: 5px 10px 0px 0px;
+  border-radius: 10px;
+  background-color:#FF6060;
+  color: #fff;
+}
+
+
+.tag {
+  margin: 0px 25px 0px 25px;
+  flex: 0 0 33.333333%;
+}
