@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <div className="main-container">
         <Navbar></Navbar>
-
         <Routes>
           <Route path={"*"} element={<NotFound />} />
           <Route path={"/"} element={<Home />} />

@@ -68,3 +68,41 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+<!-- Put the number off slides in caroussel  -->
+
+<!-- Sur la version desktop la page location nom de lappartement sur une seule ligne et non sur 2 
+
+element de gauche width a changer 
+
+prendre 50% de la largeur du carroussel 
+
+version mobile garder le comportement actuel
+
+
+Tag plus allongé padding coté g et d 
+
+Aggrandir les deux accordions plus arrondi 
+
+Mettre sur la même ligne les element de Location {id}
+
+Description + Text aligné sur la même regle 
+
+
+Equipements trop de marge entre les elements 
+
+
+Refaire le Css pas de librairie styled components
+
+Mettre la ligne rouge 404
+
+
+Mettre image blur color en background
+
+
+
+Location page mettre titre des cartes rabat de ligne sur 2 lignes  
+-->
