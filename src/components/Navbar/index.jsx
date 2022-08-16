@@ -30,7 +30,7 @@ function Navbar() {
           Accueil
         </NavLink>
         <NavLink className={isLinkActive} to={"about"}>
-          A propos
+          A Propos
         </NavLink>
       </div>
     </NavContainer>
