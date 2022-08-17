@@ -10,7 +10,7 @@ function NotFound() {
           <p className="sub404 subtitle">
             Oups! La page que vous demandez n'existe pas.
           </p>
-          <NavLink to="/">
+          <NavLink to="/"  style={{ textDecoration: 'none' }}>
             <p className="returnHome">Retourner sur la page d’accueil</p>
           </NavLink>
         </div>

@@ -349,7 +349,10 @@ to   { opacity: 1; }
 .returnHome {
   color: #FF6060;
   font-size: 1.25rem;
+  text-decoration-color: #FF6060; 
+  text-decoration: underline;
 }
+
 
 .pageContainer {
   margin: 6.25rem auto;
