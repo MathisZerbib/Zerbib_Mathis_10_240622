@@ -28,9 +28,16 @@
     
     /* Card Logement */
 
+
+
+      
+  
+
     .card-body {
         margin: 20px;
         width: 300px;
+        background-size: cover;
+        background-position: center center;
     }
 
     /* Banner  */

@@ -412,6 +412,19 @@ to   { opacity: 1; }
   background-size: cover;
 }
 
+.cardBody:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.775) 100%); */
+  background: linear-gradient(0deg, rgba(2,0,36,0.5494572829131652) 0%, rgba(255,255,255,0.23853291316526615) 47%, rgba(255,255,255,0) 89%);
+  border-radius: .625rem;
+
+}
+
 .titleCard {
   font-size: 1rem;
   color: white;
@@ -421,6 +434,7 @@ to   { opacity: 1; }
   left: 1.5625rem;
   right: 1.5625rem;
   line-height: 1.5625rem;
+  z-index: 1;
 }
 
 
