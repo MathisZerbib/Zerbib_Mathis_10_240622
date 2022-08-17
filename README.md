@@ -83,8 +83,6 @@ prendre 50% de la largeur du carroussel
 version mobile garder le comportement actuel
 
 
-Tag plus allongé padding coté g et d 
-
 Aggrandir les deux accordions plus arrondi 
 
 Mettre la ligne rouge 404

@@ -71,10 +71,11 @@
     }
  
     .accordion-container {
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         flex-direction: column;
         margin: 0;
+        width: 90%;
     }
 
     .accordion-container > div:nth-child(1) {
@@ -88,8 +89,9 @@
 
 
         .section-header-container {
-        flex-direction: column;
-    }
+            flex-direction: column;
+            width: 90%;
+        }
 
     .info-host {
         flex-direction: row-reverse;
@@ -185,10 +187,11 @@
         left: 94%;
     }
     .section-header-container{
-        width: 100%;
+        width: 95%;
     }
     .accordion-container {
         flex-direction: row;
+        width: 95%;
     }
 
     

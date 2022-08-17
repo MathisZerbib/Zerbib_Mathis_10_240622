@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(.625rem + 2vmin);
   color: white;
 }
 
@@ -52,14 +52,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
-  width: 90%;
+  width: 95%;
 }
 
 
 /* Navigation */
 .nav-link { color: #FF6060;  margin: 0px 15px;
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;}
   
 .nav-link:not([aria-current]) { text-decoration: none;}
@@ -73,8 +74,8 @@
 .accordionCard {
   width: 100%;
   justify-content: space-between;
-  margin-right: 20px;
-  margin-top: 20px;
+  margin-right: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .accordionTitle {
@@ -160,7 +161,7 @@ to   { opacity: 1; }
 }
 
 .accordionContentList:last-child {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 .625rem .625rem;
   padding-bottom: 0.5rem;
 }
 
@@ -190,12 +191,12 @@ to   { opacity: 1; }
 /* Banner */
 
 .bannerDiv {
-  border-radius: 25px;
+  border-radius: 1.5625rem;
   position: relative;
   background: black;
   overflow: hidden;
   max-width: 90%;
-  margin: 20px auto;
+  margin: 1.25rem auto;
 
 }
 
@@ -218,8 +219,8 @@ to   { opacity: 1; }
 
 /* Location */
 .coverContainer {
-  height: 415px;
-  border-radius: 25px;
+  height: 25.9375rem;
+  border-radius: 1.5625rem;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -234,12 +235,13 @@ to   { opacity: 1; }
 .locTitleContainer {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .locTitle {
   font-size: 2.25rem;
   color: #ff6060;
-  margin-bottom: 5px;
+  margin-bottom: .3125rem;
   font-weight: 400;
   text-align: left;
 }
@@ -249,7 +251,7 @@ to   { opacity: 1; }
   color: #ff6060;
   margin-top: 0;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
 
 }
 
@@ -266,8 +268,8 @@ to   { opacity: 1; }
   margin: 0;
 }
 .hostCover {
-  height: 65px;
-  border-radius: 65px;
+  height: 4.0625rem;
+  border-radius: 4.0625rem;
   margin: 0;
 }
 .tagListContainer {
@@ -279,7 +281,7 @@ to   { opacity: 1; }
 .accordionContainer {
   display: flex;
   justify-content: flex-start;
-  min-height: 300px;
+  min-height: 18.75rem;
 }
 
 .ratingStar {
@@ -293,7 +295,7 @@ to   { opacity: 1; }
 .infoHostContainer {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 6.25rem;
 }
 
 
@@ -311,10 +313,10 @@ to   { opacity: 1; }
 
 .footerContainer {
   width: 100%;
-  height: 150px;
+  height: 9.375rem;
   border-radius: 0px;
   background: black;
-  padding: 30px 0;
+  padding: 1.875rem 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -336,7 +338,7 @@ to   { opacity: 1; }
 
 .bigTitle {
   color: #FF6060;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .subtitle {
@@ -350,7 +352,7 @@ to   { opacity: 1; }
 }
 
 .pageContainer {
-  margin: 100px auto;
+  margin: 6.25rem auto;
 }
 
 
@@ -374,7 +376,7 @@ to   { opacity: 1; }
 
 /* Caroussel */ 
 .styledSlider {
-  border-radius: 25px;
+  border-radius: 1.5625rem;
 
 }
 
@@ -382,7 +384,7 @@ to   { opacity: 1; }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 415px;
+  height: 25.9375rem;
 }
 
 /* Card */
@@ -394,15 +396,15 @@ to   { opacity: 1; }
   align-items: center;
   justify-content: center;
   background: #f6f6f6;
-  border-radius: 25px;
+  border-radius: 1.5625rem;
   width: 77rem;
   max-width: 90%;
 }
 
 .cardBody {
-  border-radius: 10px;
+  border-radius: .625rem;
   position: relative;
-  height: 380px;
+  height: 23.75rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -413,9 +415,9 @@ to   { opacity: 1; }
   text-align: left;
   position: absolute;
   bottom: 0;
-  left: 25px;
-  right: 25px;
-  line-height: 25px;
+  left: 1.5625rem;
+  right: 1.5625rem;
+  line-height: 1.5625rem;
 }
 
 
@@ -425,15 +427,16 @@ to   { opacity: 1; }
 
 
 .tagList {
-  padding: 5px 0px;
-  margin: 5px 10px 0px 0px;
-  border-radius: 10px;
+  padding: .3125rem 0px;
+  margin-right: .3125rem;
+  margin-top: .3125rem;
+  border-radius: .625rem;
   background-color:#FF6060;
   color: #fff;
 }
 
 
 .tag {
-  margin: 0px 25px 0px 25px;
+  margin: 0px 1.5625rem 0px 1.5625rem;
   flex: 0 0 33.333333%;
 }
