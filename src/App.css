@@ -309,6 +309,19 @@ to   { opacity: 1; }
   width: 50%;
 }
 
+
+
+/* Caroussel */
+
+.counterSlide {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0 auto;
+  top: 90%;
+  position: absolute;
+  left: 50%;
+}
+
 /* Footer */
 
 .footerContainer {

@@ -30,7 +30,6 @@ const Caroussel = ({ slides }) => {
             zIndex: '1' }}
           />
           }
-
 { length <= 1 ? '': 
           <FontAwesomeIcon
             icon={faAngleRight}
@@ -47,7 +46,7 @@ const Caroussel = ({ slides }) => {
           {slides.map((slide, index) => {
             return (
               <div key={index}>
-                {index === current && <div className="slideImage" style={{backgroundImage:  `url(${slide})`}}> </div>}
+                {index === current && <div className="slideImage" style={{backgroundImage:  `url(${slide})`}}><p className="counterSlide"> {index+1 +"/"+length}</p> </div>}
               </div>
             );
           })}
