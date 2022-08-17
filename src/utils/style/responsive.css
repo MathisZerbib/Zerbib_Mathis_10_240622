@@ -148,6 +148,7 @@
 @media only screen and (min-width: 1024px) {
 
 
+    /* Home */
     .main-container {
         width: 80%;
         min-height: 65vh;
@@ -214,3 +215,15 @@
         font-size: 18rem;
     }
 }
+
+
+
+/* LARGE DESKTOP */
+
+@media only screen and (min-width: 1899px) {
+    .cardContainer::after {
+        content: "";
+        flex: auto;
+      }
+
+    }
