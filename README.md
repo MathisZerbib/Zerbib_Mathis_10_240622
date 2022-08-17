@@ -73,17 +73,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 <!-- Put the number off slides in caroussel  -->
-
-
-<!-- 
-
-Aggrandir les deux accordions plus arrondi 
-
-Mettre la ligne rouge 404
-
-
-Mettre image blur color en background
-
-
-
-Home Location page mettre titre des cartes rabat de ligne sur 2 lignes   -->
