@@ -4,8 +4,8 @@ import React from "react";
 function Home() {
   return (
     <>
-      <Banner></Banner>
-      <Card></Card>  
+      <Banner />
+      <Card />  
     </>
   );
 }
